@@ -7,8 +7,15 @@ public class Exceptions {
         myList.add("hello world");
         myList.add(48);
         myList.add("Goodbye World");
-        for(int i = 0; i < myList.size(); i++) {
-            Integer castedValue = (Integer) myList.get(i);
+        Errors error = new Errors();
+        try{
+            error.run(myList);
+            System.out.println("Success!");
+        } catch (Except e) {
+            System.out.println("Errors!");
+            for(int i = 0; i < myList.size(); i++) {
+                
+            }
         }
     }
 }
